@@ -61,7 +61,7 @@ After setting up component testing, you will be at the Browser Selection screen.
 
 <!-- Extraneous, belongs somewhere else: This page displays all of the browsers on your computer that we support. This generally means you'll see all Chromium-based browsers, Electron, and Firefox that are on your computer.  -->
 
-Pick your favorite and click "Launch" to open the Cypress app.
+Pick your favorite and click "Launch" to open Cypress.
 
 <!-- Leaving out until we have a spec generator -->
 

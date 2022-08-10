@@ -9,7 +9,7 @@ To follow along with the docs, you'll need a Vue 3 or Vue 2 application.
 The quickest way to get started writing component tests for Vue is to use Vue's
 own project scaffolding tool, and then to install and open Cypress. If you
 choose to add Cypress during Vue's CLI setup wizard, skip to
-["Launch the Cypress App"](#Launch-the-Cypress-App).
+["Launch Cypress"](#Launch-Cypress).
 
 This will launch Cypress's Launchpad and create all the necessary files for
 getting started.
@@ -50,7 +50,7 @@ it('works', () => {
 })
 ```
 
-## Launch the Cypress App
+## Launch Cypress
 
 Whenever you run `npx cypress open` for the first time in a project that's been
 setup, you'll be dropped into the "Browser Selection" screen.
@@ -59,7 +59,7 @@ setup, you'll be dropped into the "Browser Selection" screen.
 
 <!-- Extraneous, belongs somewhere else: This page displays all of the browsers on your computer that we support. This generally means you'll see all Chromium-based browsers, Electron, and Firefox that are on your computer.  -->
 
-Pick your favorite and click "Launch" to open the Cypress App.
+Pick your favorite and click "Launch" to open Cypress.
 
 ### In an Empty Project
 
@@ -81,7 +81,7 @@ when they were last modified, and their `git` status.
 
 <!-- TODO: link to framework configuration section of the documentation -->
 
-<!-- A detailed walk-through of the Cypress App is available within the [Framework Configuration]() section of the docs. -->
+<!-- A detailed walk-through of Cypress is available within the [Framework Configuration]() section of the docs. -->
 
 ## Next Steps
 

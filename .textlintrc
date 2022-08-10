@@ -10,9 +10,7 @@
         // Cypress product
         ["^Cypress\.io", "Cypress"],
         ["Cypress' ", "Cypress's "],
-        ["the command log", "the Command Log"],
         ["Cypress dashboard", "Cypress Dashboard"],
-        ["test runner", "Test Runner"],
 
         // Brands and Technologies
         ["ansi", "ANSI"],
@@ -133,6 +131,7 @@
         ["end ?to ?end", "end-to-end"],
         ["retryability", "retry-ability"],
         ["retriability", "retry-ability"],
+        ["test runner", "test-runner"],
       ]
     }
   },

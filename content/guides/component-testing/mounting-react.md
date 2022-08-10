@@ -100,7 +100,7 @@ area.
 Having a basic test that mounts a component in its default state is a good way
 to get started testing. Since Cypress renders your component in a real browser,
 you can visually see if it is rendering how it should, and you can also play
-around with it manually in the test runner.
+around with it manually in the Test Runner.
 
 <!-- TODO - picture of mounted stepper component -->
 

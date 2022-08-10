@@ -6,9 +6,9 @@ title: Cypress App
 
 ## <Icon name="graduation-cap"></Icon> What you'll learn
 
-- The names and purposes of the visual parts of the Cypress App
+- The names and purposes of the visual parts of Cypress
 - How to use the Selector Playground for targeting your page elements
-- How to debug tests using the built-in features of the Cypress App
+- How to debug tests using the built-in features of Cypress
 
 </Alert>
 
@@ -18,17 +18,17 @@ Cypress runs tests in a unique interactive application that allows you to see
 commands as they execute while also viewing the Application or Component Under
 Test.
 
-<DocsImage src="/img/guides/cypress-app/gui-diagram.png" alt="Cypress App"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/gui-diagram.png" alt="Cypress app GUI Diagram"></DocsImage>
 
 ## Command Log
 
-The lefthand side of the Cypress App is a visual representation of your test
-suite. Each test block is properly nested and each test, when clicked, displays
-every Cypress command and assertion executed within the test's block as well as
-any command or assertion executed in relevant `before`, `beforeEach`,
+The lefthand side of the Cypress Test Runner is a visual representation of your
+test suite. Each test block is properly nested and each test, when clicked,
+displays every Cypress command and assertion executed within the test's block as
+well as any command or assertion executed in relevant `before`, `beforeEach`,
 `afterEach`, and `after` hooks.
 
-<DocsImage src="/img/guides/cypress-app/v10/command-log.png" alt="Cypress App" width-600></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/command-log.png" alt="Cypress Test Runner command log" width-600></DocsImage>
 
 ### Open files in your IDE
 
@@ -55,9 +55,9 @@ you may want to lower the `numTestsKeptInMemory` in your
 </Alert>
 
 In the following example, hovering over the `CONTAINS` command in the Command
-Log changes the state of the Cypress App:
+Log changes the state of the Cypress Test Runner:
 
-<DocsImage src="/img/guides/cypress-app/v10/first-test-hover-contains.png" alt="Hovering over the contains tab highlights the dom element in the App in the Cypress App"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/first-test-hover-contains.png" alt="Hovering over the contains tab highlights the dom element in the App in the Cypress test-runner"></DocsImage>
 
 Cypress automatically travels back in time to a snapshot of when a hovered-over
 command resolved. Additionally, since [`cy.contains()`](/api/commands/contains)
@@ -79,7 +79,7 @@ command executed.
 In the following example, clicking on the `CLICK` command highlights it in
 purple, and does three other things worth noting:
 
-<DocsImage src="/img/guides/cypress-app/v10/first-test-click-revert.png" alt="A click on the click command in the Command Log with Cypress App labeled as 1, 2, 3"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/first-test-click-revert.png" alt="A click on the click command in the command log labeled as 1, 2, 3"></DocsImage>
 
 #### 1. Pinned snapshots
 
@@ -158,17 +158,15 @@ it('intercept command log', () => {
 
 ## Preview Pane
 
-The righthand side of the Cypress App is where the Application or Component
-Under Test is rendered.
+The righthand side is where the Application or Component Under Test is rendered.
 
 ### Application Under Test <E2EOnlyBadge />
 
 In
 [E2E Testing](/guides/core-concepts/testing-types#What-is-End-to-end-Testing),
-the righthand side of the Cypress App is used to display the Application Under
-Test (AUT): the application that was navigated to using a
-[`cy.visit()`](/api/commands/visit) or any subsequent routing calls made from
-the visited application.
+the righthand side is used to display the Application Under Test (AUT): the
+application that was navigated to using a [`cy.visit()`](/api/commands/visit) or
+any subsequent routing calls made from the visited application.
 
 In the example below, we wrote the following code in our test file:
 
@@ -214,9 +212,9 @@ unexpected behaviors
 
 In
 [Component testing](/guides/core-concepts/testing-types#What-is-Component-Testing),
-the righthand side of the Cypress App is used to display the Component Under
-Test (CUT): the component that was mounted using the
-[`cy.mount()`](/api/commands/mount) command.
+the righthand side is used to display the Component Under Test (CUT): the
+component that was mounted using the [`cy.mount()`](/api/commands/mount)
+command.
 
 In the following example, we have the following test in our spec file:
 
@@ -249,7 +247,7 @@ visible, but it is fully interactable. You can open your developer tools to
 inspect elements as you would in your normal application. The DOM is completely
 available for debugging.
 
-<DocsImage src="/img/guides/core-concepts/v10/component-under-test.png" alt="Cypress app showing mounted component and password assertion"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/v10/component-under-test.png" alt="Cypress showing mounted component and password assertion"></DocsImage>
 
 The CUT also displays in the size and orientation specified in your tests. You
 can change the size or orientation with the
@@ -264,12 +262,12 @@ the window.
 The image below shows that our application is displaying at `500px` width,
 `500px` height and scaled to `100%`.
 
-<DocsImage src="/img/guides/cypress-app/v10/viewport-scaling-ct.png" alt="Cypress app showing mounted component test viewport scale"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/viewport-scaling-ct.png" alt="Cypress showing mounted component test viewport scale"></DocsImage>
 
 _Note: The righthand side may also be used to display syntax errors in your spec
 file that prevent the tests from running._
 
-<DocsImage src="/img/guides/cypress-app/v10/aut-error-ct.png" alt="Cypress app showing error as application under test"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/aut-error-ct.png" alt="Cypress showing error as application under test"></DocsImage>
 
 _Note: Internally, the CUT renders within an iframe. This can sometimes cause
 unexpected behaviors
@@ -321,8 +319,9 @@ changes.
 ### Finding Selectors
 
 To open the Selector Playground, click the <Icon name="crosshairs"></Icon>
-button next to the URL at the top of the Cypress App. Hover over elements in
-your app to preview a unique selector for that element in the tooltip.
+button next to the URL at the top of the Cypress Test Runner. Hover over
+elements in your app to preview a unique selector for that element in the
+tooltip.
 
 <DocsImage src="/img/guides/cypress-app/open-selector-playground.gif" alt="Opening selector playground and hovering over elements"></DocsImage>
 
@@ -365,8 +364,8 @@ off will allow you to interact with your app more easily.
 
 ## Keyboard Shortcuts
 
-There are keyboard shortcuts to quickly perform common actions from within the
-Cypress App.
+There are keyboard shortcuts to quickly perform common actions from within
+Cypress.
 
 | Key | Action                        |
 | --- | ----------------------------- |
@@ -398,7 +397,7 @@ information to your console.
 Open up your Dev Tools and click on the `GET` for the `.action-email` class
 selector.
 
-<DocsImage src="/img/guides/cypress-app/v10/first-test-console-output.png" alt="Cypress App with get command pinned and console log open showing the yielded element"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/first-test-console-output.png" alt="Cypress with get command pinned and console log open showing the yielded element"></DocsImage>
 
 **We can see Cypress output additional information in the console:**
 
@@ -444,7 +443,7 @@ describe('My First Test', () => {
 Now, when the test runs, Cypress provides us a UI (similar to debugger) to step
 forward through each command in the test.
 
-<DocsImage src="/img/guides/cypress-app/v10/first-test-paused.png" alt="Cypress App shows label saying 'Paused' with Command Log showing 'Pause'"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/first-test-paused.png" alt="Cypress shows label saying 'Paused' with Command Log showing 'Pause'"></DocsImage>
 
 In action:
 
@@ -452,7 +451,7 @@ In action:
 
 ## History
 
-| Version                                     | Changes                                 |
-| ------------------------------------------- | --------------------------------------- |
-| [3.5.0](/guides/references/changelog#3-5-0) | Added keyboard shortcuts to Cypress App |
-| [1.3.0](/guides/references/changelog#1-3-0) | Added Selector Playground               |
+| Version                                     | Changes                             |
+| ------------------------------------------- | ----------------------------------- |
+| [3.5.0](/guides/references/changelog#3-5-0) | Added keyboard shortcuts to Cypress |
+| [1.3.0](/guides/references/changelog#1-3-0) | Added Selector Playground           |
