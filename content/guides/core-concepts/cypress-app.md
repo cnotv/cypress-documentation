@@ -18,7 +18,7 @@ Cypress runs tests in a unique interactive application that allows you to see
 commands as they execute while also viewing the Application or Component Under
 Test.
 
-<DocsImage src="/img/guides/cypress-app/gui-diagram.png" alt="Cypress app GUI Diagram"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/gui-diagram.png" alt="Cypress"></DocsImage>
 
 ## Command Log
 
@@ -28,7 +28,7 @@ displays every Cypress command and assertion executed within the test's block as
 well as any command or assertion executed in relevant `before`, `beforeEach`,
 `afterEach`, and `after` hooks.
 
-<DocsImage src="/img/guides/cypress-app/v10/command-log.png" alt="Cypress Test Runner command log" width-600></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/command-log.png" alt="Cypress" width-600></DocsImage>
 
 ### Open files in your IDE
 
@@ -36,7 +36,7 @@ There are some places in the Command Log that display a link to the relevant
 file where the code is located. Clicking on this link will open the file in your
 [preferred file opener](/guides/tooling/IDE-integration#File-Opener-Preference).
 
-<DocsImage src="/img/guides/cypress-app/v10/open-file-in-IDE.gif" alt="Open file in your IDE"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/open-file-in-IDE.gif" alt="Open file in your IDE"></DocsImage>
 
 ### Time Traveling
 
@@ -55,9 +55,9 @@ you may want to lower the `numTestsKeptInMemory` in your
 </Alert>
 
 In the following example, hovering over the `CONTAINS` command in the Command
-Log changes the state of the Cypress Test Runner:
+Log changes the state:
 
-<DocsImage src="/img/guides/cypress-app/v10/first-test-hover-contains.png" alt="Hovering over the contains tab highlights the dom element in the App in the Cypress test-runner"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/first-test-hover-contains.png" alt="Hovering over the contains tab highlights the dom element in the App in the Cypress"></DocsImage>
 
 Cypress automatically travels back in time to a snapshot of when a hovered-over
 command resolved. Additionally, since [`cy.contains()`](/api/commands/contains)
@@ -67,7 +67,7 @@ it into view (to the top of the page).
 Also note that as we hover over the `CONTAINS` command, Cypress reverts back to
 the URL that was present when the snapshot was taken.
 
-<DocsImage src="/img/guides/cypress-app/v10/first-test-url-revert.png" alt="The url address bar shows https://example.cypress.io/"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/first-test-url-revert.png" alt="The url address bar shows https://example.cypress.io/"></DocsImage>
 
 ### Pinning Snapshots
 
@@ -79,7 +79,7 @@ command executed.
 In the following example, clicking on the `CLICK` command highlights it in
 purple, and does three other things worth noting:
 
-<DocsImage src="/img/guides/cypress-app/v10/first-test-click-revert.png" alt="A click on the click command in the command log labeled as 1, 2, 3"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/first-test-click-revert.png" alt="A click on the click command in the Command Log with Cypress labeled as 1, 2, 3"></DocsImage>
 
 #### 1. Pinned snapshots
 
@@ -116,7 +116,7 @@ In addition to showing all the commands that were called, the command log also
 shows important events from your application or component when they occur.
 Notice these look different (they are gray and without a number).
 
-<DocsImage src="/img/guides/cypress-app/v10/first-test-page-load.png" alt="Command log shows 'Page load --page loaded--' and 'New url https://example.cypress.io/'"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/first-test-page-load.png" alt="Command log shows 'Page load --page loaded--' and 'New url https://example.cypress.io/'"></DocsImage>
 
 **Cypress logs out page events for:**
 
@@ -146,27 +146,29 @@ it('intercept command log', () => {
 })
 -->
 
-<DocsImage src="/img/guides/cypress-app/v10/instrument-panel-routes.png" alt="Routes Instrument Panel"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/instrument-panel-routes.png" alt="Routes Instrument Panel"></DocsImage>
 
 #### Stubs
 
-<DocsImage src="/img/guides/cypress-app/v10/instrument-panel-stubs.png" alt="Stubs Instrument Panel"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/instrument-panel-stubs.png" alt="Stubs Instrument Panel"></DocsImage>
 
 #### Spies
 
-<DocsImage src="/img/guides/cypress-app/v10/instrument-panel-spies.png" alt="Spies Instrument Panel"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/instrument-panel-spies.png" alt="Spies Instrument Panel"></DocsImage>
 
 ## Preview Pane
 
-The righthand side is where the Application or Component Under Test is rendered.
+The righthand side of the Cypress Test Runner is where the application or
+component under test is rendered.
 
 ### Application Under Test <E2EOnlyBadge />
 
 In
 [E2E Testing](/guides/core-concepts/testing-types#What-is-End-to-end-Testing),
-the righthand side is used to display the Application Under Test (AUT): the
-application that was navigated to using a [`cy.visit()`](/api/commands/visit) or
-any subsequent routing calls made from the visited application.
+the righthand side of the Cypress Test Runner is used to display the application
+under test (AUT): the application that was navigated to using a
+[`cy.visit()`](/api/commands/visit) or any subsequent routing calls made from
+the visited application.
 
 In the example below, we wrote the following code in our test file:
 
@@ -178,11 +180,11 @@ cy.title().should('include', 'Kitchen Sink')
 
 In the corresponding Application Preview below, you can see
 `https://example.cypress.io` is being displayed in the righthand side. Not only
-is the application visible, but it is fully interactable. You can open your
+is the application visible, but it is fully interactive. You can open your
 developer tools to inspect elements as you would in your normal application. The
 DOM is completely available for debugging.
 
-<DocsImage src="/img/guides/cypress-app/v10/application-under-test.png" alt="Application Under Test"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/application-under-test.png" alt="Application Under Test"></DocsImage>
 
 The AUT also displays in the size and orientation specified in your tests. You
 can change the size or orientation with the
@@ -197,12 +199,12 @@ the window.
 The image below shows that our application is displaying at `1000px` width,
 `660px` height and scaled to `100%`.
 
-<DocsImage src="/img/guides/cypress-app/v10/viewport-scaling.png" alt="Viewport Scaling"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/viewport-scaling.png" alt="Viewport Scaling"></DocsImage>
 
 _Note: The righthand side may also be used to display syntax errors in your test
 file that prevent the tests from running._
 
-<DocsImage src="/img/guides/cypress-app/v10/aut-error-e2e.png" alt="Errors"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/aut-error-e2e.png" alt="Errors"></DocsImage>
 
 _Note: Internally, the AUT renders within an iframe. This can sometimes cause
 unexpected behaviors
@@ -212,9 +214,9 @@ unexpected behaviors
 
 In
 [Component testing](/guides/core-concepts/testing-types#What-is-Component-Testing),
-the righthand side is used to display the Component Under Test (CUT): the
-component that was mounted using the [`cy.mount()`](/api/commands/mount)
-command.
+the righthand side of the Cypress Test Runner is used to display the Component
+Under Test (CUT): the component that was mounted using the
+[`cy.mount()`](/api/commands/mount) command.
 
 In the following example, we have the following test in our spec file:
 
@@ -243,7 +245,7 @@ it('should have password input of type password', () => {
 
 In the corresponding Component Preview below, you can see the the `LoginForm`
 component is being displayed in the righthand side. Not only is the component
-visible, but it is fully interactable. You can open your developer tools to
+visible, but it is fully interactive. You can open your developer tools to
 inspect elements as you would in your normal application. The DOM is completely
 available for debugging.
 
@@ -262,12 +264,12 @@ the window.
 The image below shows that our application is displaying at `500px` width,
 `500px` height and scaled to `100%`.
 
-<DocsImage src="/img/guides/cypress-app/v10/viewport-scaling-ct.png" alt="Cypress showing mounted component test viewport scale"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/viewport-scaling-ct.png" alt="Cypress app showing mounted component test viewport scale"></DocsImage>
 
 _Note: The righthand side may also be used to display syntax errors in your spec
 file that prevent the tests from running._
 
-<DocsImage src="/img/guides/cypress-app/v10/aut-error-ct.png" alt="Cypress showing error as application under test"></DocsImage>
+<DocsImage src="/img/guides/cypress-app/v10/aut-error-ct.png" alt="Cypress app showing error as application under test"></DocsImage>
 
 _Note: Internally, the CUT renders within an iframe. This can sometimes cause
 unexpected behaviors
@@ -323,13 +325,13 @@ button next to the URL at the top of the Cypress Test Runner. Hover over
 elements in your app to preview a unique selector for that element in the
 tooltip.
 
-<DocsImage src="/img/guides/cypress-app/open-selector-playground.gif" alt="Opening selector playground and hovering over elements"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/open-selector-playground.gif" alt="Opening selector playground and hovering over elements"></DocsImage>
 
 Click on the element and its selector will appear at the top. From there, you
 can copy it to your clipboard ( <Icon name="copy"></Icon> ) or print it to the
 console ( <Icon name="terminal"></Icon> ).
 
-<DocsImage src="/img/guides/cypress-app/copy-selector-in-selector-playground.gif" alt="Clicking an element, copying its selector to clipboard, printing it to the console"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/copy-selector-in-selector-playground.gif" alt="Clicking an element, copying its selector to clipboard, printing it to the console"></DocsImage>
 
 ### Running Experiments
 
@@ -340,7 +342,7 @@ The box at the top that displays the selector is also a text input.
 When you edit the selector, it will show you how many elements match and
 highlight those elements in your app.
 
-<DocsImage src="/img/guides/cypress-app/typing-a-selector-to-find-in-playground.gif" alt="Type a selector to see what elements it matches"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/typing-a-selector-to-find-in-playground.gif" alt="Type a selector to see what elements it matches"></DocsImage>
 
 #### Switching to Contains
 
@@ -352,7 +354,7 @@ Type in text to see which element it matches. Note that
 [`cy.contains()`](/api/commands/contains) only yields the first element that
 matches the text, even if multiple elements on the page contain the text.
 
-<DocsImage src="/img/guides/cypress-app/cy-contains-in-selector-playground.gif" alt="Experiment with cy.contains"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/cy-contains-in-selector-playground.gif" alt="Experiment with cy.contains"></DocsImage>
 
 #### Disabling Highlights
 
@@ -360,12 +362,12 @@ If you would like to interact with your app while the Selector Playground is
 open, the element highlighting might get in the way. Toggling the highlighting
 off will allow you to interact with your app more easily.
 
-<DocsImage src="/img/guides/cypress-app/turn-off-highlight-in-selector-playground.gif" alt="Turn off highlighting"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/turn-off-highlight-in-selector-playground.gif" alt="Turn off highlighting"></DocsImage>
 
 ## Keyboard Shortcuts
 
-There are keyboard shortcuts to quickly perform common actions from within
-Cypress.
+There are keyboard shortcuts to quickly perform common actions from within the
+Cypress Test Runner.
 
 | Key | Action                        |
 | --- | ----------------------------- |
@@ -373,7 +375,7 @@ Cypress.
 | `s` | Stop tests                    |
 | `f` | Bring focus to 'specs' window |
 
-<DocsImage src="/img/guides/cypress-app/v10/keyboard-shortcuts.png" alt="Tooltips show keyboard shortcuts"></DocsImage>
+<DocsImage src="/img/guides/core-concepts/cypress-app/keyboard-shortcuts.png" alt="Tooltips show keyboard shortcuts"></DocsImage>
 
 ## Debugging
 
@@ -451,7 +453,7 @@ In action:
 
 ## History
 
-| Version                                     | Changes                             |
-| ------------------------------------------- | ----------------------------------- |
-| [3.5.0](/guides/references/changelog#3-5-0) | Added keyboard shortcuts to Cypress |
-| [1.3.0](/guides/references/changelog#1-3-0) | Added Selector Playground           |
+| Version                                     | Changes                                         |
+| ------------------------------------------- | ----------------------------------------------- |
+| [3.5.0](/guides/references/changelog#3-5-0) | Added keyboard shortcuts to Cypress Test Runner |
+| [1.3.0](/guides/references/changelog#1-3-0) | Added Selector Playground                       |
